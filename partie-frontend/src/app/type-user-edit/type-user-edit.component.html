@@ -1,0 +1,10 @@
+<section>
+  <h2>Edit a type user </h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="input-box">
+      <label for="type">Type user :</label>
+      <input type="text" id="type" [(ngModel)]="userType.type" name="type" placeholder="Ex: Admin, Client..." required>
+    </div>
+    <button class="update-btn" type="submit">Edit</button>
+  </form>
+</section>

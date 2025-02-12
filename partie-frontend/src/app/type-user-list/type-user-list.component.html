@@ -1,0 +1,24 @@
+<section class="section-list">
+  <h2>Type user List</h2>
+  <button class="add-btn" (click)="goToAddUser()">➕ Add a type user</button>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type user</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let type of userTypes">
+        <td><strong>{{ type.id }}</strong></td>
+        <td><strong>{{ type.type }}</strong></td>
+        <td>
+          <button class="action-btn edit-btn" (click)="editUserType(type.id)">✏ Edit</button>
+          <button class="action-btn delete-btn" (click)="deleteUserType(type.id)">🗑 Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,81 @@
+/* ======= Section principale (Formulaire) ======= */
+section {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(70px);
+  padding: 30px;
+  width: 420px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* ======= Titre ======= */
+section h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* ======= Style des champs d’entrée (Input) ======= */
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Uniformiser la largeur et l’apparence des champs input */
+.input-box input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*  Placeholder stylé */
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*  Centrer et améliorer la visibilité des labels */
+.input-box label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* ======= Style du bouton "Ajouter" ======= */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+/*  Effet au survol */
+.login-btn:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}

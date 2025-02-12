@@ -1,0 +1,111 @@
+/* ======= Section principale (Formulaire) ======= */
+section {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(70px);
+  padding: 15px;
+  padding-top:10px ;
+  margin-top: 100px;
+  width: 420px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* Titre */
+section h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* ======= Style des champs d'entrée (Input & Select) ======= */
+.input-box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/*  Uniformiser la largeur des champs input et select */
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.input-box select {
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.input-box select:focus,
+.input-box select:valid {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #000 !important;
+}
+
+.input-box select::after {
+  content: '▼';
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-box select option {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Effet sur l'option sélectionnée */
+.input-box select option:checked {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* ======= Style du bouton "Ajouter" ======= */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-btn:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+/* ======= Centrer les labels ======= */
+.input-box label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}

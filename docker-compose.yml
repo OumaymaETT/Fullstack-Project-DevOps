@@ -1,0 +1,39 @@
+version: '3'
+services:
+  angular:
+    container_name: angular-app
+    build: ./partie-frontend
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./partie-frontend:/usr/src/app
+      - /usr/src/app/node_modules 
+    depends_on:
+      - partie-backend
+    restart: always
+
+  partie-backend:
+    container_name: backend-app
+    build: ./partie-backend
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/my_database?serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQL8Dialect
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: mysql-db
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: my_database
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    restart: always

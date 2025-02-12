@@ -1,0 +1,28 @@
+<section class="section-list">
+  <h2> User List</h2>
+  <button class="add-btn" (click)="goToAddUserType()">➕ Add an user</button>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>First name</th>
+        <th>Email</th>
+        <th>Type user</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td><strong>{{ user.name }}</strong></td>
+        <td><strong>{{ user.firstName }}</strong></td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.userType?.type }}</td>
+        <td>
+          <button class="action-btn edit-btn" (click)="editUser(user)">✏ Edit</button>
+          <button class="action-btn delete-btn" (click)="deleteUser(user.id)">🗑 Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

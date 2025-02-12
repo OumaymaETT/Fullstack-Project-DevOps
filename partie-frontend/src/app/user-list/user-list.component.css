@@ -1,0 +1,104 @@
+/* ======= Conteneur principal ======= */
+.section-list {
+  padding-top: 50px;
+  margin-top: auto;
+}
+
+.section-list h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/*  Bouton "Ajouter utilisateur" */
+.add-btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: white;
+}
+
+/*  Tableau stylisé */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*  Style des en-têtes */
+.user-table th {
+  padding: 12px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/*  Style des cellules */
+.user-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*  Alternance des couleurs */
+.user-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/*  Ajustement des boutons */
+.action-btn {
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 3px;
+}
+
+/*  Bouton Modifier */
+.edit-btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+.edit-btn:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: white;
+}
+
+/* Bouton Supprimer */
+.delete-btn {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  color: white;
+}
+
+.action-col {
+  width: 140px;
+}
+
