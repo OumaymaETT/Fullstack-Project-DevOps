@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class TypeUserListComponent implements OnInit {
   userTypes: any[] = [];
+  isSortedAscending: boolean = true;
 
   constructor(private userTypeService: UserTypeService, private router: Router) {}
   ngOnInit(): void {
@@ -25,6 +26,15 @@ export class TypeUserListComponent implements OnInit {
     this.userTypeService.deleteUserType(id).subscribe(() => {
       this.userTypes = this.userTypes.filter(type => type.id !== id);
     });
+  }
+
+  sortByType(): void {
+    this.userTypes.sort((a, b) => {
+      return this.isSortedAscending
+        ? a.type.localeCompare(b.type)
+        : b.type.localeCompare(a.type);
+    });
+    this.isSortedAscending = !this.isSortedAscending; 
   }
 
   editUserType(id: number): void {
